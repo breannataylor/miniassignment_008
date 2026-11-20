@@ -1,0 +1,56 @@
+/*
+Start with “Ch 10 Exercise Code.zip” in Mod 7
+Check out the hover effect! The CSS to implement this is in Ch 15, which we won't have time for in this class, but you're welcome to read ahead and possibly use it on your websites!)
+Goal: Implement a grid layout to make the website look like the picture to the right.
+You can use any grid strategies you learned in the book!
+
+*/
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url(img/space-background.jpg);
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: rgb(248, 231, 255);
+    text-shadow: 2px 2px #333;
+}
+
+.grid-container {
+    display: grid;
+    /* Makes two equal width columns */
+    grid-template-columns: repeat(2, 1fr);
+    /* Spacing between cards */
+    gap: 25px;
+    padding: 20px;
+}
+
+.grid-item {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+    font-size: 20px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.grid-item h2 {
+    color: #9d4ad1;
+    margin-top: 0;
+}
+
+.grid-item p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.grid-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
