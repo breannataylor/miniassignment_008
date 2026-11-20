@@ -3,28 +3,41 @@ Start with “Ch 10 Exercise Code.zip” in Mod 7
 Check out the hover effect! The CSS to implement this is in Ch 15, which we won't have time for in this class, but you're welcome to read ahead and possibly use it on your websites!)
 Goal: Implement a grid layout to make the website look like the picture to the right.
 You can use any grid strategies you learned in the book!
-
 */
 
+:root {
+    --color-primary: #b760ee;              /* (card headings) */
+    --color-light: rgb(220, 201, 239);     /* (page title) */
+    --color-dark: #612084;                 /* (body text, shadows) */
+
+    /* Separate fonts for each heading level */
+    --font-body: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-h1: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+    --font-h2: Georgia, 'Times New Roman', serif;
+}
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--font-body);
     background: url(img/space-background.jpg);
-    color: #333;
+    color: var(--color-dark);
     margin: 0;
     padding: 20px;
 }
 
+
 h1 {
-    color: rgb(248, 231, 255);
-    text-shadow: 2px 2px #333;
+    font-family: var(--font-h1);
+    color: var(--color-light);
+    text-shadow: 2px 2px var(--color-dark);
+    text-align: center;
+    background-color: #1c0328;
 }
 
 .grid-container {
     display: grid;
     /* Makes two equal width columns */
     grid-template-columns: repeat(2, 1fr);
-    /* Spacing between cards */
-    gap: 25px;
+    gap: 25px; /* Spacing between cards */
     padding: 20px;
 }
 
@@ -41,7 +54,8 @@ h1 {
 }
 
 .grid-item h2 {
-    color: #9d4ad1;
+    font-family: var(--font-h2);
+    color: var(--color-primary);
     margin-top: 0;
 }
 

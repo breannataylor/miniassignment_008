@@ -13,17 +13,47 @@ Play with the browser width. What does this do?
   When the browser size changes, the ul flex items wrap to the next line
 */
 
+:root {
+    /* Colors */
+    --color-green: #243a2e;        /* text, nav bar */
+    --color-burgundy: #6b1f2e;     /* title banner, active link */
+    --color-parchment: #f0e6d0;    /* page background, light text */
+
+    /* Fonts */
+    --font-body: Garamond, 'Baskerville Old Face', Baskerville, 'Times New Roman', serif;
+    --font-h1: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    --font-h2: Georgia, 'Times New Roman', serif;
+}
+
+html {
+  background-color: var(--color-parchment);
+}
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: var(--font-body);
+  font-size: 1.15rem;
+  color: var(--color-green);
   width: 70%;
   margin: auto;
 }
 
 h1 {
-  background-color: lightgreen;
+  font-family: var(--font-h1);
+  background-color: var(--color-burgundy);
+  color: var(--color-parchment);
   margin-top: 1em;
   padding: 1rem;
   clear: left;
+  letter-spacing: 0.05em;
+}
+
+h2 {
+  font-family: var(--font-h2);
+  color: var(--color-burgundy);
+}
+
+a {
+  color: var(--color-burgundy);
 }
 
 #nav_menu ul {
@@ -44,16 +74,17 @@ h1 {
   /* width: 250px; */
   padding: 1em 2em;
   text-decoration: none;
-  background-color: blue;
-  color: white;
+  background-color: var(--color-green);
+  color: var(--color-parchment);
+  font-family: var(--font-h2);
   font-weight: bold;
-  border-right: 2px solid white;
+  border-right: 2px solid var(--color-parchment);
 }
 #nav_menu ul li a.lastitem {
   border-right: none;
 }
 #nav_menu ul li a.current {
-  color: yellow;
+  background-color: var(--color-burgundy);
 }
 
 ul.square{
